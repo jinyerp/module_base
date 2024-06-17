@@ -15,6 +15,8 @@ Route::middleware(['web','auth:sanctum', 'verified'])->group(function () {
 });
 
 
+
+## HR 어드민
 Route::middleware(['web','auth:sanctum', 'verified', 'admin', 'super'])->group(function () {
     Route::prefix('/admin/hr')->name('admin.hr.')->group(function () {
 

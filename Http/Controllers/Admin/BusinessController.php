@@ -19,19 +19,24 @@ class BusinessController extends WireTablePopupForms
         ## 테이블 정보
         $this->actions['table'] = "hr_business";
 
-        // 컨트롤러 페이지 레이아웃
-        $this->actions['view']['layout'] = "jinyerp-base::admin.business.layout";
+        ## 지니ERP 업무관리자 공용 레이아웃
+        //$this->actions['view']['layout'] = "jinyerp-base::layouts.www_admin";
+        //$this->actions['view']['sidebar'] = "jinyerp-base::layouts.www_admin_sidebar"; // 사이드 메뉴
 
-        // 테이블 레이아웃
-        $this->actions['view']['table'] = "jinyerp-base::admin.business.table";
 
-        $this->actions['view']['title'] = "jinyerp-base::admin.business.title";
         $this->actions['view']['list'] = "jinyerp-base::admin.business.list";
         $this->actions['view']['form'] = "jinyerp-base::admin.business.form";
 
+        $this->actions['title'] = "사업장관리";
+        $this->actions['subtitle'] = "HR 적용 사업장을 관리합니다.";
+
+        // 레이아웃 전환
+        //$this->setLayout('www');
+
+        // 테마를 적용합니다.
+        $this->setTheme("jinyerp/hr-admin");
 
     }
-
 
 
 }

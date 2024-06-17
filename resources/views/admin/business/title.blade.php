@@ -3,9 +3,9 @@
         <div class="page-title-box">
             <ol class="m-0 breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                <li class="breadcrumb-item"><a href="javascript: void(0);">Hr</a></li>
-                <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
-                <li class="breadcrumb-item active">Business</li>
+                @foreach (explode("/",$actions['route']['uri']) as $item)
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">{{$item}}</a></li>
+                @endforeach
             </ol>
 
             <div class="mb-3">
