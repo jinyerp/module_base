@@ -1,10 +1,9 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHrBusinessTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +12,7 @@ class CreateHrBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::create('hr_business', function (Blueprint $table) {
+        Schema::create('module_business', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
@@ -49,6 +48,6 @@ class CreateHrBusinessTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hr_business');
+        Schema::dropIfExists('module_business');
     }
-}
+};

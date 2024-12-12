@@ -8,7 +8,7 @@ Route::middleware(['web','auth:sanctum', 'verified'])->group(function () {
     Route::prefix('/jiny')->name('jiny.')->group(function () {
 
         Route::get('/', function () {
-            return view("jinyerp-base::jiny");
+            return view("module-base::jiny");
         });
 
     });
